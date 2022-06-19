@@ -1,1 +1,2 @@
 faker>=13.11.1
+faker-credit-score
