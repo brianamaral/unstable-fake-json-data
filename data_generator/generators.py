@@ -5,6 +5,8 @@ from random import random,randint
 
 from datetime import datetime
 
+from helpers import helpers
+
 import yaml
 
 faker = Faker()
@@ -73,6 +75,6 @@ class FakeCreditGenerator:
 
         picked_columns = self._pick_random_columns(variable_columns)
 
-        columns = {**base_columns,**picked_columns}
+        columns = helpers.merge_dicts(base_columns,picked_columns)
 
         return columns
